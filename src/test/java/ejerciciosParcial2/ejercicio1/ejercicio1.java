@@ -26,7 +26,7 @@ public class ejercicio1 {
     }
 
     @Test
-    public void createUpdateDeleteProject() throws InterruptedException {
+    public void createUpdateItem() throws InterruptedException {
         // click login button
         chrome.findElement(By.xpath("//img[@src=\"/Images/design/pagelogin.png\"]")).click();
         // set email
@@ -36,6 +36,8 @@ public class ejercicio1 {
         // click login
         chrome.findElement(By.id("ctl00_MainContent_LoginControl1_ButtonLogin")).click();
         // verificar si existe el control del logout
+        Assertions.assertTrue((chrome.findElements(By.xpath("//a[text()='Logout']")).size() == 1),
+                "ERROR no se pudo ingresar a la sesion");
 
         /* CREATE PROJECT*/
         // click add new project
@@ -81,7 +83,6 @@ public class ejercicio1 {
         // Verificar que el elemento se haya actualizado correctamente
         List<WebElement> updatedItems = chrome.findElements(By.xpath(String.format("//tr[td/div[@class='ItemContentDiv' and text()='%s']]", newNameItem)));
         Assertions.assertFalse(updatedItems.isEmpty(), "ERROR: No se encontró el elemento actualizado");
-
 
         Thread.sleep(2000);
     }
