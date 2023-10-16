@@ -12,7 +12,7 @@ import java.time.Duration;
 import java.util.Date;
 import java.util.List;
 
-public class ejercicio1 {
+public class Ejercicio1 {
     ChromeDriver chrome;
 
     @BeforeEach

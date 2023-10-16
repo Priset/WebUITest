@@ -10,7 +10,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.time.Duration;
 
-public class ejercicio2 {
+public class Ejercicio2 {
     ChromeDriver chrome;
     String email = "priset@gmail.com";
     String password = "priset1234";
@@ -38,7 +38,7 @@ public class ejercicio2 {
         WebElement userElement = chrome.findElement(By.id(":r0:"));
         Assertions.assertNotNull(userElement, "ERROR: El inicio de sesión falló");
 
-        Thread.sleep(8000);
+        Thread.sleep(5000);
     }
 
     @AfterEach

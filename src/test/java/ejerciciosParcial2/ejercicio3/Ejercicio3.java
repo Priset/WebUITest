@@ -7,10 +7,9 @@ import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-import javax.swing.plaf.TableHeaderUI;
 import java.time.Duration;
 
-public class ejercicio3 {
+public class Ejercicio3 {
     ChromeDriver chrome;
 
     @BeforeEach
