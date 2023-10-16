@@ -61,6 +61,7 @@ public class CreateUpdateTodoLyTest {
 
         List<WebElement> updatedProjects = chrome.findElements(By.xpath(String.format("//td[text()='%s']", nuevoNombreProyecto)));
         Assertions.assertTrue(updatedProjects.size() > 0, "ERROR: El proyecto no fue actualizado correctamente");
+
     }
 
     @AfterEach
